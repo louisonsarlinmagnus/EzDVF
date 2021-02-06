@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-namespace   EzDVF
+namespace   EzDVF_IHM
 {
     public class Geom
     {

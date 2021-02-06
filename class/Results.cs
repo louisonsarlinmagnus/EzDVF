@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace EzDVF
+namespace EzDVF_IHM
 {
     public class Results
     {
@@ -21,7 +21,6 @@ namespace EzDVF
         public string derniere_maj {get; set;}
         public string licence {get; set;}
         public int nb_resultats {get; set;}
-        //public Transaction transaction {get; set;}
         public List<Transaction> transactions {get; set;}
     }
 }

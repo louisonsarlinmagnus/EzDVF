@@ -1,4 +1,4 @@
-namespace EzDVF
+namespace EzDVF_IHM
 {
     public class Transaction
     {

@@ -1,6 +1,3 @@
-EzDVF/bin/
-EzDVF/obj/
-EzDVF/.vscode/
-
-EzDVF_IHM/bin/
-EzDVF_IHM/obj/
+bin/
+obj/
+.vscode/

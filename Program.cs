@@ -1,11 +1,8 @@
 using System;
-using System.Collections.Generic;
+using Newtonsoft.Json;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace EzDVF_IHM
 {
@@ -14,6 +11,13 @@ namespace EzDVF_IHM
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            string content = RequeteGET.requeteGET("code_postal=83430");
+            Results listResults = new Results();
+            if (!String.IsNullOrEmpty(content))
+            {
+                listResults = JsonConvert.DeserializeObject<Results>(content);
+                Console.Write(listResults.transactions.Count);
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
