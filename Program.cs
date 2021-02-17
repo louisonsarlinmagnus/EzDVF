@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace EzDVF_IHM
+namespace EzDVF
 {
     public class Program
     {
@@ -16,7 +16,10 @@ namespace EzDVF_IHM
             if (!String.IsNullOrEmpty(content))
             {
                 listResults = JsonConvert.DeserializeObject<Results>(content);
-                Console.Write(listResults.transactions.Count);
+                /* for (int i = 0; i < listResults.nb_resultats; i++)
+                {
+                    Console.WriteLine(listResults.resultats[i].numero_plan);
+                } */
             }
         }
 

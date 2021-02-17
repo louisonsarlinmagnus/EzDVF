@@ -3,7 +3,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace EzDVF_IHM
+namespace EzDVF
 {
       class RequeteGET
     {

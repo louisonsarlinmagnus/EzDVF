@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Logging;
 
-namespace EzDVF_IHM.Pages
+namespace EzDVF.Pages
 {
     public class IndexModel : PageModel {
         private readonly ILogger<IndexModel> _logger;

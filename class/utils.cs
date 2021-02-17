@@ -1,7 +1,7 @@
-using Newtonsoft.Json;
 using System.Text;
 using System.IO;
-namespace EzDVF_IHM
+
+namespace EzDVF
 {
     public static class Convert
     {
@@ -17,7 +17,7 @@ namespace EzDVF_IHM
                 AddText(fs, header);
                 for (int i = 0; i < results.nb_resultats; i++)
                 {
-                    AddText(fs, results.transactions.ToString());
+                    AddText(fs, results.resultats.ToString());
                 }
             }
             
