@@ -11,48 +11,35 @@ ViewData["Title"] = "Accueil";
 
 <body>
 
-    <h1 class="card-title mb-0">Demandes de Valeur Foncière Faciles</h1>
+    <h1 class="card-title mb-0 title">Demandes de Valeur Foncière Faciles</h1>
 
-    <form id="query-form" class="query-form" method="post">
-
-        <div class="row">
-            <div class="col">
-                <div class="form-outline">
-                    <label asp-for="input.communalCode" class="control-label"></label>
-                    <input id="communal-code" asp-for="input.communalCode" placeholder="Code INSEE"  class="form-control" />
-                    <span asp-validation-for="input.communalCode" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-outline">
-                    <label asp-for="input.section" class="control-label"></label>
-                    <input id="section" asp-for="input.section" placeholder="Section Cadastrale"  class="form-control" />
-                    <span asp-validation-for="input.section" class="text-danger"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="form-outline">
-                    <label asp-for="input.planNumber" class="control-label"></label>
-                    <input id="plan-number" asp-for="input.planNumber" placeholder="Identifiant de la Parcelle" class="form-control" />
-                    <span asp-validation-for="input.planNumber" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-outline">
-                    <label asp-for="input.zipCode" class="control-label"></label>
-                    <input id="zipcode" asp-for="input.zipCode"  placeholder="Code Postal"  class="form-control" />
-                    <span asp-validation-for="input.zipCode"class="text-danger"></span>
-                </div>
-            </div>
-        </div>
-
-		<button id="query-submit" type="submit" asp-page-handler="Submit" class="btn btn-primary btn-block mb-3">Recherche</button>
-	</form>
-
-    
+    <form class="form-style-7">
+        <ul>
+            <li>
+                <label asp-for="input.communalCode" class="control-label"></label>
+                <input id="communal-code" asp-for="input.communalCode" class="form-control" />
+                <span>Code INSEE de la Commune</span>
+            </li>
+            <li>
+                <label asp-for="input.section" class="control-label"></label>
+                <input id="section" asp-for="input.section"  class="form-control" />
+                <span>Section Castradale</span>
+            </li>
+            <li>
+                <label asp-for="input.planNumber" class="control-label"></label>
+                <input id="plan-number" asp-for="input.planNumber" class="form-control" />
+                <span>Identifiant de la Parcelle</span>
+            </li>
+            <li>
+                <label asp-for="input.zipCode" class="control-label"></label>
+                <input id="zipcode" asp-for="input.zipCode"  placeholder="Code Postal"  class="form-control" />
+                <span>Code Postal</span>
+            </li>
+            <li>
+                <button id="query-submit" type="submit" asp-page-handler="Submit" class="btn btn-primary btn-block mb-3">Recherche</button>
+            </li>
+        </ul>
+    </form>
 
 
 @*     <hr class="transition">
