@@ -1,4 +1,5 @@
 # EzDVF
+[![.NET](https://github.com/louisonsarlinmagnus/EzDVF/actions/workflows/dotnet.yml/badge.svg)](https://github.com/louisonsarlinmagnus/EzDVF/actions/workflows/dotnet.yml)
 ## Introduction
 Ce programme a pour but de facilité les requètes dans la base DVF(Demandes de Valeur Foncière).
 
