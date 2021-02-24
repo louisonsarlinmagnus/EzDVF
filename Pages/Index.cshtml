@@ -14,11 +14,11 @@ ViewData["Title"] = "Accueil";
     <h1 class="card-title mb-0 title">Demandes de Valeur Foncière Faciles</h1>
 
     @{
-        //if () {
+        if ((@ViewData["ResultNumber"] != null)&&(@ViewData["ResultNumber"].ToString() == "0")) {
             <div class="alert alert-danger">
                 <strong>Attention!</strong> Aucune entrée n'a été trouvée dans la base de données. Le fichier de résultats ne sera pas généré. Veuillez essayer une autre requête.
             </div>
-        //}
+        }
     }
 
     <form id="query-form" class="form-style-7" method="post">
