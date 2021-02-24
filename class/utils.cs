@@ -1,6 +1,8 @@
 using System.IO;
 using System;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Logging;
+using EzDVF.Pages;
 
 namespace EzDVF
 {
@@ -8,9 +10,9 @@ namespace EzDVF
     {
         private static readonly string delimiter = ",";
         
-        public static Results fromRequestToObjects(string requete)
+        public static Results fromRequestToObjects(string requete, ILogger<IndexModel> __logger)
         {
-            string content = RequeteGET.requeteGET(requete);
+            string content = RequeteGET.requeteGET(requete, __logger);
             Results listResults = new Results();
             if (!String.IsNullOrEmpty(content))
             {

@@ -12,8 +12,6 @@ using EzDVF;
 
 namespace EzDVF.Pages
 {
-
-    //TODO: Validation javascript pour au moins un critère
     //TODO: CSS sur la page index
     //TODO: Affichage du nombre de résultats trouvés sur Index
     //TODO: Manuel d'utilisation à modifier
@@ -33,7 +31,7 @@ namespace EzDVF.Pages
             if (!ModelState.IsValid) return Page();
             string request = TriCriteres();
             string fileName = Path.Combine("resultats-" + "-" + request + "-" + DateTime.Now.ToString("yyyyMMdd") + ".csv"); //Format de fileName: ./resultats-[REQUETE]-[DATE].csv
-            Results results = Convert.fromRequestToObjects(request);
+            Results results = Convert.fromRequestToObjects(request, _logger);
             ViewData["ResultNumber"] = results.nb_resultats;
             if ((results.nb_resultats == 0)||(results.nb_resultats == null)) return Page();
             Convert.fromResultsToCSV(results, fileName);

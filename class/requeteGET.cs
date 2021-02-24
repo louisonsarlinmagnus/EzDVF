@@ -2,6 +2,8 @@ using System;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Logging;
+using EzDVF.Pages;
 
 namespace EzDVF
 {
@@ -10,7 +12,7 @@ namespace EzDVF
         // On défini le lien vers l'api source
         public static string sourceURL = "http://api.cquest.org/dvf?";
 
-        public static string requeteGET(string suiteURL)
+        public static string requeteGET(string suiteURL, ILogger<IndexModel> __logger)
         {
             string fullURL = sourceURL + suiteURL;
             // On créer la requète
@@ -32,7 +34,7 @@ namespace EzDVF
             }
             catch (System.Exception)
             {
-                Console.WriteLine("Erreur d'accès a la base de donnée");
+                __logger.LogError(suiteURL + ": error while processing the GET Request");
                 return "";
             }
             // On stock la réponse
