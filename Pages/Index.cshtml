@@ -16,23 +16,23 @@ ViewData["Title"] = "Accueil";
     <form class="form-style-7">
         <ul>
             <li>
-                <label asp-for="input.communalCode" class="control-label"></label>
-                <input id="communal-code" asp-for="input.communalCode" class="form-control" />
+                <label asp-for="input.communalCode" class="control-label" hidden></label>
+                <input type="text" id="communal-code" asp-for="input.communalCode" class="form-control" />
                 <span>Code INSEE de la Commune</span>
             </li>
             <li>
-                <label asp-for="input.section" class="control-label"></label>
-                <input id="section" asp-for="input.section"  class="form-control" />
+                <label asp-for="input.section" class="control-label" hidden></label>
+                <input type="text" id="section" asp-for="input.section"  class="form-control" />
                 <span>Section Castradale</span>
             </li>
             <li>
-                <label asp-for="input.planNumber" class="control-label"></label>
-                <input id="plan-number" asp-for="input.planNumber" class="form-control" />
+                <label asp-for="input.planNumber" class="control-label" hidden></label>
+                <input type="text" id="plan-number" asp-for="input.planNumber" class="form-control" />
                 <span>Identifiant de la Parcelle</span>
             </li>
             <li>
-                <label asp-for="input.zipCode" class="control-label"></label>
-                <input id="zipcode" asp-for="input.zipCode"  class="form-control" />
+                <label asp-for="input.zipCode" class="control-label" hidden></label>
+                <input type="text" id="zipcode" asp-for="input.zipCode"  class="form-control" />
                 <span>Code Postal</span>
             </li>
             <li>
