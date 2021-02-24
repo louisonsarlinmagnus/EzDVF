@@ -1,6 +1,15 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
-RUN mkdir /app/
-#COPY /bin/Release/netcoreapp3.1/linux-x64 /app/
-EXPOSE 80
-WORKDIR sbin/
-ENTRYPOINT ["ls"]
+WORKDIR /EzDVF
+
+RUN mkdir aspnetapp/
+COPY *.sln .
+COPY *.csproj ./aspnetapp/
+RUN dotnet restore
+
+COPY /. ./aspnetapp/
+WORKDIR /aspnetapp/
+RUN dotnet publish -c release -o /app --no-restore
+
+FROM mcr.microsoft.com/dotnet/aspnet:3.1
+WORKDIR /appCOPY --from=build /app ./
+ENTRYPOINT ["dotnet", "EzDVF.dll"]
