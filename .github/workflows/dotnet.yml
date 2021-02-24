@@ -22,7 +22,7 @@ jobs:
 
     - name: Il est ou le Youki
       run: |
-        ls bin/Release/netcoreapp3.1
+        ls bin/Release/netcoreapp3.1/linux-x64
 
       
 #    - name: Création des binaires

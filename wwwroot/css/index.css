@@ -67,7 +67,7 @@
 	padding: 3px;
 	margin: 0 -9px -9px -9px;
 	text-align: center;
-	color: #C0C0C0;
+	color: #504e4e;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 11px;
 }
@@ -99,4 +99,43 @@
 
 div.alert-danger {
 	text-align: center;
+}
+
+.close {
+	float: right;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 1;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	filter: alpha(opacity=20);
+	opacity: .2;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: 1px solid rgba(53, 49, 49, 0.87);
+}
+
+.help-preview {
+	text-align: center;
+}
+
+.utilisation {
+	padding-bottom: 7%;
+}
+
+.utilisation-title {
+	padding-top: 7%;
 }

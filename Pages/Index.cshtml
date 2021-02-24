@@ -15,8 +15,10 @@ ViewData["Title"] = "Accueil";
 
     @{
         if ((@ViewData["ResultNumber"] != null)&&(@ViewData["ResultNumber"].ToString() == "0")) {
-            <div class="alert alert-danger">
-                <strong>Attention!</strong> Aucune entrée n'a été trouvée dans la base de données. Le fichier de résultats ne sera pas généré. Veuillez essayer une autre requête.
+            <div class="alert alert-danger alert-dismissable">
+                <strong>Attention!</strong>
+                 Aucune entrée n'a été trouvée dans la base de données. Le fichier de résultats ne sera pas généré. Veuillez essayer une autre requête.
+                 <button type="button" class="close" data-dismiss="alert">×</button>
             </div>
         }
     }
@@ -49,52 +51,46 @@ ViewData["Title"] = "Accueil";
         </ul>
     </form>
 
-
-@*     <hr class="transition">
+     <hr>
 
     <div class="help-preview">
-            <br>
-            <br>
-            <h2>Utilisation</h2>
-            <h4 id="formattage">Formattage:</h4>
-            <p>Il suffit de rentrer au minimum un critère afin de lancer la création et le téléchargement du fichier résultat. Ci dessous sont présentés des<br>
-            </p>
-            <br>
-            <br>
-            <h4 id="mots-cle">Mots clés:</h4>
-            <table class="tableau">
-                <thead>
-                    <tr>
-                        <th>Mot clé</th>
-                        <th>Description</th>
-                        <th>Exemple de valeur</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>code_commune</td>
-                        <td>code INSEE de la commune</td>
-                        <td>94068</td>
-                    </tr>
-                    <tr>
-                        <td>section</td>
-                        <td>section cadastrale</td>
-                        <td>94068000CQ</td>
-                    </tr>
-                    <tr>
-                        <td>numero_plan</td>
-                        <td>identifiant de la parcelle</td>
-                        <td>94068000CQ0110</td>
-                    </tr>
-                    <tr>
-                        <td>code_postal</td>
-                        <td>code postal</td>
-                        <td>83200</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-    </div> *@
+        <h2 class="utilisation-title">Utilisation</h2>
+        <p class="utilisation">Il suffit de rentrer au minimum un critère afin de lancer la création et le téléchargement du fichier résultat. <br>
+        Ci dessous sont présentés des exemples d'utilisations des critères de recherche.<br>
+        </p>
+        <h4 id="mots-cle">Mots clés:</h4>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Mot clé</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Exemple de valeur</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">code_commune</td>
+                    <td>code INSEE de la commune</td>
+                    <td>94068</td>
+                </tr>
+                <tr>
+                    <th scope="row">section</td>
+                    <td>section cadastrale</td>
+                    <td>94068000CQ</td>
+                </tr>
+                <tr>
+                    <th scope="row">numero_plan</td>
+                    <td>identifiant de la parcelle</td>
+                    <td>94068000CQ0110</td>
+                </tr>
+                <tr>
+                    <th scope="row">code_postal</td>
+                    <td>code postal</td>
+                    <td>83200</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
 
     <script src="~/js/index.js"></script>
 </body>

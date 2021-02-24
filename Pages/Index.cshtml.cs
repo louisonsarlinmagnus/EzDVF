@@ -23,7 +23,9 @@ namespace EzDVF.Pages
             _logger = logger;
         }
 
-        public void OnGet() {}
+        public void OnGet() {
+            ViewData["ResultNumber"] = "";
+        }
 
         public async Task<IActionResult> OnPostSubmit() {
             if (!ModelState.IsValid) return Page();
