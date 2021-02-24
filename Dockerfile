@@ -1,16 +1,5 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
-WORKDIR /EzDVF
-
-RUN mkdir aspnetapp/
-COPY *.sln .
-COPY *.csproj ./aspnetapp/
-RUN dotnet restore
-
-COPY /. ./aspnetapp/
-WORKDIR /aspnetapp/
-RUN dotnet publish -c release -o /app --no-restore
-
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
-WORKDIR /app
-COPY --from=build /app ./
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+RUN mkdir /app
+COPY bin/Release/netcoreapp3.1/linux-x64 app/
+WORKDIR app/
 ENTRYPOINT ["ls"]
