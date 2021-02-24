@@ -22,7 +22,7 @@ jobs:
 
     - name: Il est ou le Youki
       run: |
-        ls buildkit-mount047844244/bin/Release/netcoreapp3.1
+        ls bin/Release/netcoreapp3.1
 
       
 #    - name: Création des binaires
