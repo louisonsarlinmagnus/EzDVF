@@ -21,8 +21,10 @@ jobs:
       run: dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true /p:PublishTrimmed=true 
 
     - name: Il est ou le Youki
-      run: cd bin/Release/netcoreapp3.1/publish/
-      
+      run: |
+        cd bin/Release/
+        ls
+
       
 #    - name: Création des binaires
 #      run: dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true
