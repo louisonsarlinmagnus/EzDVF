@@ -12,7 +12,6 @@ using EzDVF;
 
 namespace EzDVF.Pages
 {
-    //TODO: CSS sur la page index
     //TODO: Affichage du nombre de résultats trouvés sur Index
     //TODO: Manuel d'utilisation à modifier
     public class IndexModel : PageModel {
