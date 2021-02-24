@@ -14,10 +14,10 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.406
+        dotnet-version: 3.1.x
   
     - name: Build avec dotnet
-      run: dotnet build
+      run: dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true /p:PublishTrimmed=true 
 
 #    - name: Création des binaires
 #      run: dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true
