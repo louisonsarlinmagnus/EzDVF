@@ -1,54 +1,69 @@
-﻿
-
-@page
+﻿@page
 @model IndexModel
 @{
 ViewData["Title"] = "Accueil";
 }
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="~/css/index.css" />
 </head>
 
 <body>
-    <div class="title">Demandes de Valeur Foncière Faciles</div>
 
-    <form method="post" >
-        <fieldset>
-          <div>
-            <label for="criteria-name">Rechercher:</label>
-            <input type="text" class="criteria-name" name="criteria-name" value="" />
-          </div>
+    <h1 class="card-title mb-0">Demandes de Valeur Foncière Faciles</h1>
 
-          <div>
-            <input type="submit" value="Submit" class="submit" />
-          </div>
-        </fieldset>
-    </form>
+    <form id="query-form" class="query-form" method="post">
+
+        <div class="row">
+            <div class="col">
+                <div class="form-outline">
+                    <label asp-for="input.communalCode" class="control-label"></label>
+                    <input id="communal-code" asp-for="input.communalCode" placeholder="Code INSEE"  class="form-control" />
+                    <span asp-validation-for="input.communalCode" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <label asp-for="input.section" class="control-label"></label>
+                    <input id="section" asp-for="input.section" placeholder="Section Cadastrale"  class="form-control" />
+                    <span asp-validation-for="input.section" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-outline">
+                    <label asp-for="input.planNumber" class="control-label"></label>
+                    <input id="plan-number" asp-for="input.planNumber" placeholder="Identifiant de la Parcelle" class="form-control" />
+                    <span asp-validation-for="input.planNumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <label asp-for="input.zipCode" class="control-label"></label>
+                    <input id="zipcode" asp-for="input.zipCode"  placeholder="Code Postal"  class="form-control" />
+                    <span asp-validation-for="input.zipCode"class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+		<button id="query-submit" type="submit" asp-page-handler="Submit" class="btn btn-primary btn-block mb-3">Recherche</button>
+	</form>
+
+    
 
 
-    @{
-        if (ViewContext.HttpContext.Request.Method == "POST") {
-            string criterianame = Request.Form["criteria-name"];
-
-            <text>
-            You entered: <br />
-            Criteria Name: @criterianame <br />
-            </text>
-        }
-    }
-
-
-    <hr class="transition">
+@*     <hr class="transition">
 
     <div class="help-preview">
-        <body>
             <br>
             <br>
             <h2>Utilisation</h2>
             <h4 id="formattage">Formattage:</h4>
             <p>Il suffit de taper a la suite un mot clé suivi de sa valeur.<br>
-                Dans le cas de plusieurs mots clées, les spéparer d'un <b>&</b>.
+                Dans le cas de plusieurs mots clés, les séparer d'un <b>&</b>.
             </p>
             <br>
             <br>
@@ -94,6 +109,7 @@ ViewData["Title"] = "Accueil";
                 <li>lat=48.85&amp;lon=2.35&amp;dist=200</li>
                 <li>code_postal=89110&amp;type_local=Maison</li>
             </ul>
-        </body>
-    </div>
+    </div> *@
+
+    <script src="~/js/index.js"></script>
 </body>
