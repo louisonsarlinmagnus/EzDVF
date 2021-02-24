@@ -22,7 +22,7 @@ jobs:
 
     - name: Il est ou le Youki
       run: |
-        cd bin/Release/
+        cd bin/Release/netcoreapp3.1
         ls
 
       
