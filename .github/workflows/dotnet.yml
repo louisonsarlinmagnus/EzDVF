@@ -17,7 +17,7 @@ jobs:
         dotnet-version: 3.1.406
   
     - name: Build avec dotnet
-      run: dotnet build <my project>
+      run: dotnet build
 
 #    - name: Création des binaires
 #      run: dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true
