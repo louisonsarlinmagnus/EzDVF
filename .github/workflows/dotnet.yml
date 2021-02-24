@@ -17,10 +17,10 @@ jobs:
       run: |
         echo "Dans le premier EZDVF"
         cd /home/runner/work/EzDVF
-        ll -a
+        ls
         echo "Dans le /net5.0"
         cd /EzDVF/bin/Release/net5.0
-        ll -a
+        ls
         echo "Dans /linux-x64/publish/"
         cd /linux-x64/publish/
-        ll -a
+        ls
