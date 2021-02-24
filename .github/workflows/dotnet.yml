@@ -15,6 +15,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
+    
+    - name: Il est ou le Youki
+      run: cd bin/Release/netcoreapp3.1
   
     - name: Dotnet Publish
       run: dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true /p:PublishTrimmed=true 
