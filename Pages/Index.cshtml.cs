@@ -12,7 +12,6 @@ using EzDVF;
 
 namespace EzDVF.Pages
 {
-    //TODO: Affichage du nombre de résultats trouvés sur Index
     //TODO: Manuel d'utilisation à modifier
     public class IndexModel : PageModel {
         private readonly ILogger<IndexModel> _logger;
