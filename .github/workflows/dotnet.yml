@@ -16,7 +16,7 @@ jobs:
       with:
         dotnet-version: 3.1.x
   
-    - name: Build avec dotnet
+    - name: Dotnet Publish
       run: dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true /p:PublishTrimmed=true 
 
 #    - name: Création des binaires
