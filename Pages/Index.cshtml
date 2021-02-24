@@ -14,8 +14,9 @@ ViewData["Title"] = "Accueil";
     <h1 class="card-title mb-0 title">Demandes de Valeur Foncière Faciles</h1>
 
     @{
-        if (ViewData["ResultNumber"].ToString() == "0") {
-            <div class="flex-rectangle">Aucune entrée n'a été trouvée dans la base de données. Le fichier de résultats ne sera pas généré.</div>
+        if(ViewData["ResultNumber"] != null) {
+                <div class="flex-rectangle">Aucune entrée n'a été trouvée dans la base de données. Le fichier de résultats ne sera pas généré.</div>
+            
         }
     }
 

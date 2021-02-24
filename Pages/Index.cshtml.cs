@@ -32,7 +32,7 @@ namespace EzDVF.Pages
             string fileName = Path.Combine("resultats-" + "-" + request + "-" + DateTime.Now.ToString("yyyyMMdd") + ".csv"); //Format de fileName: ./resultats-[REQUETE]-[DATE].csv
             Results results = Convert.fromRequestToObjects(request, _logger);
             ViewData["ResultNumber"] = results.nb_resultats;
-            if ((ViewData["ResultNumber"].ToString() == 0)||(results.nb_resultats == null)) return Page();
+            if ((results.nb_resultats == 0)||(results.nb_resultats == null)) return Page();
             Convert.fromResultsToCSV(results, fileName);
             return await Downloader(fileName);
         }
